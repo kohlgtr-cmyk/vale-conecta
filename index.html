@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vale Conecta | Espanhol ao Vivo com Muita Prática</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
@@ -17,9 +18,13 @@
             <li><a href="#inicio">Início</a></li>
             <li><a href="#metodologia">Metodologia</a></li>
             <li><a href="#aulas">Aulas</a></li>
-            <li><a href="#contato">Contato</a></li>
         </ul>
-        <a href="#contato" class="cta-nav">Começar Agora</a>
+        <ul class="icons">
+            <li><a href="http://instagram.com/vale_conecta/"><i class="fa-brands fa-instagram fa-2x"></i></a></li>
+            <li><a href="https://wa.me/555198544162?text=Gostaria%20de%20fazer%20minha%20inscrição"><i class="fa-brands fa-whatsapp fa-2x"></i></a></li>
+            <li><a href="https://www.tiktok.com/@valescaanjosm?is_from_webapp=1&sender_device=pc"><i class="fa-brands fa-tiktok fa-2x"></i></a></li>
+        </ul>
+        <a href="#" class="cta-nav open-modal" data-modal="modalContato">Começar Agora</a>
     </nav>
 
     <!-- Hero Section -->
@@ -30,8 +35,8 @@
                 <h1>Espanhol ao Vivo, com Muita Prática de Fala</h1>
                 <p>No curso Hablamos Conecta, as aulas são ao vivo com foco em conversação, dinâmicas e temas do dia a dia. Você aprende se conectando com o idioma sem se assustar, apenas fala!</p>
                 <div class="hero-cta">
-                    <a href="#contato" class="btn-primary">Começar Agora</a>
-                    <a href="#metodologia" class="btn-secondary">Saber Mais</a>
+                    <a href="#" class="btn-primary open-modal" data-modal="modalComecar">Começar Agora</a>
+                    <a href="#" class="btn-secondary open-modal" data-modal="modalInfoAulas">Saber Mais</a>
                 </div>
             </div>
             <div class="hero-visual">
@@ -120,12 +125,29 @@
         </div>
     </section>
 
+    <!-- About the Course -->
+    <section class="about-course">
+        <div class="about-content">
+            <div class="about-header">
+                <h2>Sobre as Aulas</h2>
+            </div>
+            <div class="about-text">
+                <p>O curso possui duração total de <strong>1 ano</strong>, com possibilidade de renovação ao término. As aulas acontecem uma vez por semana, com duração de <strong>1 hora cada encontro</strong>.</p>
+                
+                <p>Para garantir clareza e segurança para ambas as partes, é realizado um <strong>contrato de prestação de serviços</strong>, contendo todas as informações sobre horários, pagamentos e funcionamento das aulas.</p>
+                
+                <p>O pagamento pode ser efetuado por <strong>boleto bancário ou cartão de crédito</strong>, conforme sua preferência.</p>
+            </div>
+        </div>
+    </section>
+
     <!-- Class Options -->
     <section class="class-options" id="aulas">
         <div class="section-header">
             <span class="section-badge">ESCOLHA COMO QUER</span>
             <h2>Aprender</h2>
             <p>Opções personalizadas para seu ritmo</p>
+            <a href="#" class="btn-pricing open-modal" data-modal="modalPrecos">💰 Ver Preços e Planos</a>
         </div>
         <div class="options-grid">
             <div class="option-card">
@@ -140,7 +162,7 @@
                         <li>Avanço rápido com atenção exclusiva da professora</li>
                         <li>Ideal para quem quer comunicar rápido e com foco</li>
                     </ul>
-                    <a href="#contato" class="btn-primary" >Agendar Aula</a>
+                    <a href="#" class="btn-primary open-modal" data-modal="modalContato">Agendar Aula</a>
                 </div>
             </div>
             <div class="option-card">
@@ -155,7 +177,7 @@
                         <li>Dinâmicas em grupo</li>
                         <li>Perfeito para quem quer interagir e estudar</li>
                     </ul>
-                    <a href="#contato" class="btn-primary">Entrar no Grupo</a>
+                    <a href="#" class="btn-primary open-modal" data-modal="modalContato">Entrar no Grupo</a>
                 </div>
             </div>
         </div>
@@ -166,7 +188,36 @@
         <div class="cta-content">
             <h2>Aprenda Espanhol de Forma Real e Divertida!</h2>
             <p>Comece hoje mesmo sua jornada no idioma. 100% online, ao vivo e com muita prática de conversação.</p>
-            <a href="https://wa.me/5511999999999?text=Olá! Quero saber mais sobre as aulas de espanhol da Vale Conecta!" class="btn-white" target="_blank" rel="noopener">Começar Agora</a>
+            <a href="#" class="btn-white open-modal" data-modal="modalComecar">Começar Agora</a>
+        </div>
+    </section>
+
+
+        <!-- About Teacher -->
+    <section class="about-teacher">
+        <div class="teacher-container">
+            <div class="teacher-content">
+                <div class="teacher-text">
+                    <h2>Quem Será Sua Guia Nessa Jornada Linguística?</h2>
+                    <div class="teacher-bio">
+                        <p>Meu nome é <strong>Valesca dos Anjos Menezes</strong>, tenho 21 anos e sou licencianda em Letras Espanhol. Minha trajetória com o idioma é marcada pelo interesse profundo pela língua e pela riqueza cultural presente em cada país hispânico. Sempre me encantei pelos diferentes sotaques, pelas expressões próprias de cada região e pela forma como a língua conecta pessoas e histórias.</p>
+                        
+                        <p>Minha proposta é oferecer uma experiência de aprendizagem leve, eficiente e significativa — uma jornada na qual você não estará sozinho, mas acompanhado por alguém comprometido em tornar o espanhol parte concreta do seu cotidiano. Ao longo do tempo, percebi que aprender espanhol não é apenas estudar gramática: é criar coragem, abrir-se para novas possibilidades e confiar no próprio ritmo.</p>
+                        
+                        <p>Por isso, coloco minha dedicação em cada encontro, oferecendo orientação, clareza e apoio constante. Estarei ao seu lado para que cada passo seja seguro, cada dúvida seja compreendida e cada conquista seja valorizada.</p>
+                        
+                        <p class="teacher-welcome"><strong>Seja bem-vindo(a) a esta jornada.</strong></p>
+                    </div>
+                    <div class="teacher-tagline">
+                        <p>En Hablamos Conecta, no solo aprendes un idioma... <strong>¡Vives el español!</strong></p>
+                    </div>
+                </div>
+                <div class="teacher-image">
+                    <div class="image-placeholder">
+                        <img src="prof.jpeg" alt="professora">
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -177,6 +228,7 @@
                 <h3>VALE CONECTA</h3>
                 <p>Escola de idiomas especializada em espanhol com metodologia moderna e foco em conversação. Aprenda de forma natural e divertida!</p>
             </div>
+    
             
             <div class="footer-links-wrapper">
                 <div class="footer-links">
@@ -190,24 +242,279 @@
                 <div class="footer-links">
                     <h4>Contato</h4>
                     <ul>
-                        <li><a rel="noopener" href="mailto:contato@valeconecta.com">Email</a></li>
-                        <li><a rel="noopener" href="https://wa.me/5511999999999" target="_blank">WhatsApp</a></li>
-                        <li><a rel="noopener" href="https://instagram.com/valeconectaidiomas" target="_blank">Instagram</a></li>
+                        <li><a rel="noopener" href="valeconectaidiomas@gmail.com">Email</a></li>
+                        <li><a rel="noopener" href="https://wa.me/555198544162?text=Gostaria%20de%20fazer%20minha%20inscrição" target="_blank">WhatsApp</a></li>
+                        <li><a rel="noopener" href="http://instagram.com/vale_conecta/" target="_blank">Instagram</a></li>
+                        <li><a rel="noopener" href="https://www.tiktok.com/@valescaanjosm?is_from_webapp=1&sender_device=pc" target="_blank">TikTok</a></li>
                     </ul>
                 </div>
             </div>
         </div>
         <div class="footer-bottom">
             <p>&copy; 2026 Vale Conecta Idiomas. Todos os direitos reservados.</p>
+            <p>Desenvolvido por <a href="https://portfolio-dkohl.vercel.app" target="_blank" rel="noopener">DouglasKohl</a></p>
         </div>
     </footer>
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script></body>
-</html>
 
-<!--
-  <div class="footer-links">
-                <h4>Links Rápidos</h4>
-                <ul>
-                    <li><a href="#inicio">Início</a></li>
-                    <li><a href="#metodologia">Metodologia</a></li>
-      
+
+    <!-- Modals -->
+    
+    <!-- Modal 1: Contato/Formulário -->
+    <div id="modalContato" class="modal">
+        <div class="modal-content">
+            <span class="modal-close" data-modal="modalContato">&times;</span>
+            <div class="modal-header">
+                <h2>Entre em Contato</h2>
+                <p>Preencha o formulário e entraremos em contato em breve!</p>
+            </div>
+            <form class="modal-form" id="formContato">
+                <div class="form-group">
+                    <label for="nome">Nome Completo</label>
+                    <input type="text" id="nome" name="nome" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="telefone">WhatsApp</label>
+                    <input type="tel" id="telefone" name="telefone" placeholder="(11) 99999-9999" required>
+                </div>
+                <div class="form-group">
+                    <label for="interesse">Interesse</label>
+                    <select id="interesse" name="interesse" required>
+                        <option value="">Selecione...</option>
+                        <option value="individual">Aulas Individuais</option>
+                        <option value="grupo">Aulas em Grupo</option>
+                        <option value="informacoes">Mais Informações</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="mensagem">Mensagem (opcional)</label>
+                    <textarea id="mensagem" name="mensagem" rows="4"></textarea>
+                </div>
+                <button type="submit" class="btn-primary btn-form">Enviar Mensagem</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal 2: Começar Agora -->
+    <div id="modalComecar" class="modal">
+        <div class="modal-content modal-cta">
+            <span class="modal-close" data-modal="modalComecar">&times;</span>
+            <div class="modal-header">
+                <h2>Comece Sua Jornada no Espanhol!</h2>
+                <p>Escolha a melhor opção para você</p>
+            </div>
+            <div class="modal-options">
+                <div class="modal-option-card">
+                    <div class="modal-option-icon">👤</div>
+                    <h3>Aulas Individuais</h3>
+                    <p>Atenção exclusiva e horários flexíveis</p>
+                    <ul class="modal-benefits">
+                        <li>Personalização total</li>
+                        <li>Avanço rápido</li>
+                        <li>Foco nas suas metas</li>
+                    </ul>
+                    <a href="#" class="btn-primary open-modal" data-modal="modalContato">Quero Saber Mais</a>
+                </div>
+                <div class="modal-option-card">
+                    <div class="modal-option-icon">👥</div>
+                    <h3>Aulas em Grupo</h3>
+                    <p>Aprenda interagindo com outros alunos</p>
+                    <ul class="modal-benefits">
+                        <li>Muita prática</li>
+                        <li>Ambiente dinâmico</li>
+                        <li>Valor acessível</li>
+                    </ul>
+                    <a href="#" class="btn-primary open-modal" data-modal="modalContato">Quero Saber Mais</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 3: Informações sobre as Aulas -->
+    <div id="modalInfoAulas" class="modal">
+        <div class="modal-content modal-info">
+            <span class="modal-close" data-modal="modalInfoAulas">&times;</span>
+            <div class="modal-header">
+                <h2>Como Funcionam as Aulas</h2>
+                <p>Tudo que você precisa saber sobre nossa metodologia</p>
+            </div>
+            <div class="info-sections">
+                <div class="info-section">
+                    <div class="info-icon">📅</div>
+                    <h3>Duração e Contrato</h3>
+                    <p>Curso com duração total de 1 ano, com encontros semanais de 1 hora cada. É realizado um contrato de prestação de serviços com todas as informações sobre horários, pagamentos e funcionamento.</p>
+                </div>
+                <div class="info-section">
+                    <div class="info-icon">🎯</div>
+                    <h3>Metodologia Comunicativa</h3>
+                    <p>Foco total em conversação desde o primeiro dia. Aprendizado através de situações reais, dinâmicas interativas e temas do cotidiano. Você aprende falando!</p>
+                </div>
+                <div class="info-section">
+                    <div class="info-icon">📚</div>
+                    <h3>Materiais Inclusos</h3>
+                    <p>Todos os materiais digitais são fornecidos: apostilas, exercícios de escuta, atividades interativas e jogos para praticar o vocabulário.</p>
+                </div>
+                <div class="info-section">
+                    <div class="info-icon">🌟</div>
+                    <h3>Formas de Pagamento</h3>
+                    <p>O pagamento pode ser efetuado por boleto bancário ou cartão de crédito, conforme sua preferência. Parcele em até 12x ao longo do ano do curso.</p>
+                </div>
+            </div>
+            <div class="modal-footer-cta">
+                <p>Pronto para começar?</p>
+                <a href="#" class="btn-primary open-modal" data-modal="modalContato">Falar com a Gente</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 4: Preços/Planos -->
+    <div id="modalPrecos" class="modal">
+        <div class="modal-content modal-pricing">
+            <span class="modal-close" data-modal="modalPrecos">&times;</span>
+            <div class="modal-header">
+                <h2>Planos e Investimento</h2>
+                <p>Escolha a melhor opção para o seu perfil</p>
+            </div>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <div class="pricing-badge">FLEXÍVEL</div>
+                    <h3>Aulas Individuais</h3>
+                    <div class="price-value">
+                        <span class="currency">R$</span>
+                        <span class="amount">109,90</span>
+                        <span class="period">/mês</span>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>✓ Perfeitas para quem busca atenção exclusiva</li>
+                        <li>✓ Personalização total e evolução no próprio ritmo</li>
+                        <li>✓ Horários 100% flexíveis</li>
+                        <li>✓ Atenção exclusiva da professora</li>
+                        <li>✓ Materiais inclusos</li>
+                        <li>✓ Foco nas suas necessidades</li>
+                    </ul>
+                    <p class="pricing-note">12 parcelas mensais ao longo do ano</p>
+                    <p class="pricing-total">Valor Total do Curso Anual: <strong>R$ 1.318,80</strong></p>
+                    <a href="#" class="btn-primary open-modal" data-modal="modalContato">Solicitar Proposta</a>
+                </div>
+                <div class="pricing-card featured">
+                    <div class="pricing-badge popular">MAIS POPULAR</div>
+                    <h3>Aulas em Grupo</h3>
+                    <div class="price-value">
+                        <span class="currency">R$</span>
+                        <span class="amount">89,90</span>
+                        <span class="period">/mês</span>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>✓ Indicadas para quem gosta de aprender em conjunto</li>
+                        <li>✓ Trocar experiências e praticar conversação de forma dinâmica</li>
+                        <li>✓ 4 aulas por mês</li>
+                        <li>✓ Grupos pequenos</li>
+                        <li>✓ Materiais inclusos</li>
+                        <li>✓ Ambiente interativo</li>
+                    </ul>
+                    <p class="pricing-note">12 parcelas mensais ao longo do ano</p>
+                    <p class="pricing-total">Valor Total do Curso Anual: <strong>R$ 1.078,80</strong></p>
+                    <a href="#" class="btn-primary open-modal" data-modal="modalContato">Quero Entrar</a>
+                </div>
+            </div>
+            <div class="pricing-footer">
+                <p>💳 Formas de pagamento: PIX, cartão de crédito ou transferência</p>
+                <p>📞 Dúvidas? Fale conosco pelo WhatsApp!</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Modal functionality
+        const modals = document.querySelectorAll('.modal');
+        const openButtons = document.querySelectorAll('.open-modal');
+        const closeButtons = document.querySelectorAll('.modal-close');
+
+        // Open modal
+        openButtons.forEach(button => {
+            button.addEventListener('click', (e) => {
+                e.preventDefault();
+                const modalId = button.getAttribute('data-modal');
+                const modal = document.getElementById(modalId);
+                if (modal) {
+                    // Close any open modal first
+                    modals.forEach(m => m.classList.remove('active'));
+                    // Open the requested modal
+                    modal.classList.add('active');
+                    document.body.style.overflow = 'hidden';
+                }
+            });
+        });
+
+        // Close modal with X button (desktop)
+        closeButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const modalId = button.getAttribute('data-modal');
+                const modal = document.getElementById(modalId);
+                if (modal) {
+                    modal.classList.remove('active');
+                    document.body.style.overflow = 'auto';
+                }
+            });
+        });
+
+        // Close modal clicking outside (mobile)
+        modals.forEach(modal => {
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) {
+                    modal.classList.remove('active');
+                    document.body.style.overflow = 'auto';
+                }
+            });
+        });
+
+        // Close modal with ESC key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                modals.forEach(modal => {
+                    modal.classList.remove('active');
+                });
+                document.body.style.overflow = 'auto';
+            }
+        });
+
+        // Form submission
+        const formContato = document.getElementById('formContato');
+        if (formContato) {
+            formContato.addEventListener('submit', (e) => {
+                e.preventDefault();
+                
+                // Get form data
+                const nome = document.getElementById('nome').value;
+                const email = document.getElementById('email').value;
+                const telefone = document.getElementById('telefone').value;
+                const interesse = document.getElementById('interesse').value;
+                const mensagem = document.getElementById('mensagem').value;
+
+                // Create WhatsApp message
+                const whatsappMessage = `Olá! Vim pelo site Vale Conecta.
+                
+*Nome:* ${nome}
+*E-mail:* ${email}
+*Telefone:* ${telefone}
+*Interesse:* ${interesse}
+${mensagem ? `*Mensagem:* ${mensagem}` : ''}`;
+
+                // Encode and redirect to WhatsApp
+                const encodedMessage = encodeURIComponent(whatsappMessage);
+                const whatsappURL = `https://wa.me/5511999999999?text=${encodedMessage}`;
+                
+                window.open(whatsappURL, '_blank');
+                
+                // Close modal and reset form
+                document.getElementById('modalContato').classList.remove('active');
+                document.body.style.overflow = 'auto';
+                formContato.reset();
+            });
+        }
+    </script>
+</body>
+</html>
