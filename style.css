@@ -249,24 +249,40 @@
         .hero-image {
             width: 100%;
             height: 600px;
-            background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
             border-radius: 30px;
             position: relative;
             overflow: hidden;
             box-shadow: 0 20px 60px rgba(139, 69, 19, 0.2);
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+            background: #E70918;
         }
 
-        .hero-image::after {
-            content: '¡ESPAÑOL!';
+        .hero-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain; /* Mostra a imagem inteira sem cortar */
+            border-radius: 30px;
+        }
+
+        .hero-image::before {
+            content: '';
+            background-size: cover;
+            background-position: center;
             position: absolute;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            font-family: 'Playfair Display', serif;
-            font-size: 5rem;
-            font-weight: 900;
-            color: rgba(255, 255, 255, 0.15);
-            letter-spacing: 0.1em;
+            font-size: 15rem;
+            opacity: 0.3;
+            filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.2));
+        }
+
+        .hero-image::after {
+            content: '';
+            display: none;
         }
 
         .floating-card {
@@ -505,9 +521,9 @@
         }
 
         .image-placeholder {
+            width: 100%;
             max-width: 450px;
             height: auto;
-            background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
             border-radius: 30px;
             display: flex;
             align-items: center;
@@ -515,17 +531,20 @@
             box-shadow: 0 25px 60px rgba(139, 69, 19, 0.3);
             position: relative;
             overflow: hidden;
+            background: var(--cream);
+        }
+
+        .image-placeholder img {
+            width: 100%;
+            height: auto;
+            object-fit: contain; /* Mostra a imagem inteira */
+            border-radius: 30px;
+            display: block;
         }
 
         .image-placeholder::before {
             content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="1" fill="white" opacity="0.1"/></svg>');
-            background-size: 30px 30px;
+            display: none; /* Remove o pattern quando houver imagem */
         }
 
         .image-text {
@@ -1544,7 +1563,24 @@
             }
 
             .image-placeholder {
+                height: auto;
+                max-width: 100%;
+            }
+
+            .image-placeholder img {
+                width: 100%;
+                height: auto;
+                object-fit: contain;
+            }
+
+            .hero-image {
                 height: 400px;
+            }
+
+            .hero-image img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
             }
 
             .about-text {
@@ -1579,6 +1615,13 @@
                 grid-template-columns: 1fr;
                 gap: 2rem;
             }
+
+            .icons {
+            display: flex;
+            gap: 10px;
+            list-style: none;
+            padding: 5px;
+        }
 
             .floating-card {
                 display: none;
