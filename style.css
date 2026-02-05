@@ -137,6 +137,7 @@
             display: flex;
             align-items: center;
             padding: 8rem 5% 4rem;
+            padding-top: 10rem;
             position: relative;
             overflow: hidden;
         }
