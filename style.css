@@ -1258,6 +1258,7 @@
             grid-template-columns: repeat(2, 1fr);
             gap: 2rem;
             margin-bottom: 2rem;
+
         }
 
         .pricing-card {
@@ -1322,6 +1323,22 @@
             align-items: flex-start;
             justify-content: center;
             gap: 0.3rem;
+        }
+
+        .price-value1 {
+            margin-bottom: 2rem;
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            gap: 0.3rem;
+            color: var(--primary-dark);
+        }
+
+        .pricing-features1 {
+            list-style: none;
+            margin-bottom: 2rem;
+            color: var(--primary-dark);
+            text-align: left;
         }
 
         .currency {
